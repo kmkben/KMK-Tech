@@ -1,0 +1,51 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<title>
+			{% block title %}KMK-Tech{% endblock %}
+		</title>
+
+		{% tailwind_css %}
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+	</head>
+
+	<body class="bg-gray-100 text-gray-900">
+		<div class="flex h-screen">
+			<!-- Sidebar -->
+			{% include 'partials/_sidebar.html' %}
+		
+			<!-- Main content -->
+			<div class="flex flex-col flex-1">
+				{% include 'partials/_header.html' %}
+		
+				<main class="flex-1 p-6 overflow-y-auto">
+					{% block content %}{% endblock %}
+				</main>
+		
+				{% include 'partials/_footer.html' %}
+			</div>
+		</div>
+	</body>
+</html>
+
+<script>
+	const toggleBtn = document.getElementById('toggleSidebar');
+	const sidebar = document.getElementById('sidebar');
+  
+	if (toggleBtn && sidebar) {
+	  toggleBtn.addEventListener('click', () => {
+		sidebar.classList.toggle('hidden');
+		sidebar.classList.toggle('absolute');
+		sidebar.classList.toggle('z-50');
+		sidebar.classList.toggle('top-0');
+		sidebar.classList.toggle('left-0');
+		sidebar.classList.toggle('h-full');
+	  });
+	}
+  </script>
