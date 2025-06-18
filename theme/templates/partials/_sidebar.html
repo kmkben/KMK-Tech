@@ -6,10 +6,11 @@
       <a href="#" class="block px-4 py-2 rounded hover:bg-gray-100">Projects</a>
       <a href="#" class="block px-4 py-2 rounded hover:bg-gray-100">Settings</a>
     </nav>
+    class="bg-gray-900 text-white h-screen w-64 flex flex-col justify-between hidden md:flex"
 </aside>-->
 
 <!-- Sidebar -->
-<aside id="sidebar" class="bg-gray-900 text-white h-screen w-64 flex flex-col justify-between hidden md:flex">
+<aside id="sidebar" class="hidden md:flex fixed top-0 left-0 h-full w-64 bg-gray-900 text-white flex-col justify-between z-40">
     <!-- Top section with profile -->
     <div>
         <div class="flex flex-col items-center py-6">
@@ -43,7 +44,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="block py-2 px-4 rounded hover:bg-gray-800">
+                <a href="{% url 'contact' %}" class="block py-2 px-4 rounded hover:bg-gray-800">
                 <!--📬--><i class="fa-regular fa-envelope pe-2"></i> Contact
                 </a>
             </li>

@@ -61,7 +61,7 @@ ROOT_URLCONF = 'KMK_Tech.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['theme/templates', 'core/templates'],
+        'DIRS': ['theme/templates', 'core/templates', 'contact/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
