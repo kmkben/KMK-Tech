@@ -18,7 +18,7 @@
             </p>
         </div>
 
-        <div class="border-2 border-gray-400 p-3 shadow rounded-xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+        <!--<div class="border-2 border-gray-400 p-3 shadow rounded-xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
             <div>
                 <img
                     src="{% static 'images/profile/kk.jpg' %}"
@@ -29,16 +29,29 @@
             <div>
                 <p class="text-7xl text-gray-300">Engineer </p>
             </div>
-        </div>
+        </div>-->
 
-
-        <div class="mt-16">
-            <h2 class="text-2xl font-bold mb-4 text-gray-100">💡 What Drives Me</h2>
-            <ul class="list-disc ml-6 space-y-2 text-gray-300 text-base">
-              <li>Clean code and reliable systems are not optional — they’re my standard.</li>
-              <li>Security should be part of design, not an afterthought.</li>
-              <li>Curiosity and learning fuel my work — every project teaches me something.</li>
-            </ul>
+        <div class="border-2 border-gray-500 p-4 shadow rounded-xl grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
+            <!-- 🎥 Video Section -->
+            <div class="w-full">
+              <div class="aspect-w-16 aspect-h-9">
+                <iframe class="rounded-lg shadow-lg w-full h-full"
+                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                        title="Intro to Kemoko Keita & KMK-Tech"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          
+            <!-- 💬 Text Section -->
+            <div class="flex flex-col justify-center text-gray-100">
+              <h2 class="text-3xl font-bold mb-4">👋 Meet Me in 90 Seconds</h2>
+              <p class="text-gray-400 text-base leading-relaxed">
+                Learn more about my background, my mission with KMK-Tech, and how I blend embedded engineering with cybersecurity to build meaningful, secure technology.
+              </p>
+            </div>
         </div>
 
 
@@ -137,8 +150,21 @@
             </div>
         </div>
 
+        <div class="mt-16">
+            <h2 class="text-2xl font-bold mb-6 text-gray-100 text-center">💡 What Drives Me</h2>
+            <div class="bg-gray-800 p-6 rounded-lg shadow text-gray-300">
+              <ul class="space-y-4 list-disc list-inside text-base leading-relaxed">
+                <li>🔍 I believe <strong>clarity and simplicity</strong> are the foundation of good engineering — whether in code, hardware, or system architecture.</li>
+                <li>🛡️ I embed <strong>security-by-design</strong> in everything I build — from firmware to full-stack applications.</li>
+                <li>🔧 I love working at the intersection of <strong>embedded systems</strong>, <strong>connectivity</strong>, and <strong>software automation</strong>.</li>
+                <li>🌍 I'm driven by curiosity, continuous learning, and the desire to build tech that truly impacts lives.</li>
+                <li>🚀 Through KMK-Tech, I aim to deliver smart, scalable, and secure solutions with a human-first approach.</li>
+              </ul>
+            </div>
+        </div>
 
-        <div class="my-16">
+
+        <!--<div class="my-16">
             <h2 class="text-2xl font-bold text-gray-100 mb-6">🧰 Tools & Technologies</h2>
 
             <div class="flex flex-wrap gap-3 my-4">
@@ -158,11 +184,11 @@
               <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm">Linux</span>
               <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm">Pentesting Tools</span>
             </div>
-        </div>
+        </div>-->
 
 
-        <section class="max-w-5xl mx-auto text-gray-100">
-            <h1 class="text-3xl font-bold my-8 text-gray-200">Professional Experience</h1>
+        <section class="max-w-5xl mx-auto">
+            <!--<h1 class="text-3xl font-bold my-8 text-gray-200">Professional Experience</h1>
           
             <div class="space-y-8">
                 {% for exp in experiences %}
@@ -177,9 +203,32 @@
                         {% endif %}
                     </div>
                 {% endfor %}
+            </div>-->
+
+            <h2 class="text-3xl font-bold my-10 text-gray-100">💼 Professional Experience</h2>
+
+            <div class="space-y-6">
+            {% for exp in experiences %}
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-indigo-500">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-xl font-bold text-white">{{ exp.company }}</h3>
+                    <span class="text-sm text-gray-400">({{ exp.start_date }} – {{ exp.end_date }})</span>
+                </div>
+                <p class="text-indigo-200 font-semibold text-sm">{{ exp.role }}</p>
+                <p class="text-gray-300 text-sm mt-2">{{ exp.description|safe }}</p>
+
+                {% if exp.website %}
+                    <a href="{{ exp.website }}" target="_blank"
+                    class="inline-block mt-3 px-4 py-1 bg-indigo-600 text-white text-sm rounded hover:bg-indigo-700 transition">
+                    Visit {{ exp.company }}
+                    </a>
+                {% endif %}
+                </div>
+            {% endfor %}
             </div>
+            
           
-            <h1 class="text-3xl font-bold my-12 mb-8 text-gray-100">Education & Certifications</h1>
+            <!--<h1 class="text-3xl font-bold my-12 mb-8 text-gray-100">Education & Certifications</h1>
           
             <div class="space-y-8">
               {% for edu in educations %}
@@ -194,8 +243,119 @@
                 {% endif %}
               </div>
               {% endfor %}
+            </div>-->
+
+            <h2 class="text-3xl font-bold my-12 text-gray-100">🎓 Education & Certifications</h2>
+
+            <div class="space-y-6">
+            {% for edu in educations %}
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-green-500">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-xl font-bold text-white">{{ edu.school }}</h3>
+                    <span class="text-sm text-gray-400">({{ edu.start_date }} – {{ edu.end_date }})</span>
+                </div>
+                <p class="text-green-200 font-semibold text-sm">{{ edu.degree }}</p>
+                <p class="text-gray-300 text-sm mt-2">{{ edu.description|safe }}</p>
+
+                {% if edu.website %}
+                    <a href="{{ edu.website }}" target="_blank"
+                    class="inline-block mt-3 px-4 py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700 transition">
+                    Visit {{ edu.school }}
+                    </a>
+                {% endif %}
+                </div>
+            {% endfor %}
             </div>
         </section>
+
+
+
+        <div class="my-16">
+            <h2 class="text-3xl font-bold text-gray-100 mb-6 ">🧰 Tools & Technologies</h2>
+          
+            <!-- Grouped by domain -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-100">
+          
+              <!-- Languages -->
+              <div>
+                <h3 class="text-lg font-semibold mb-2 text-blue-400">💬 Programming Languages</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">C</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">C++</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Python</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">JavaScript</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Shell</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">HTML/CSS</span>
+                </div>
+              </div>
+          
+              <!-- Embedded -->
+              <div>
+                <h3 class="text-lg font-semibold mb-2 text-indigo-400">🔌 Embedded Systems</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">STM32</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">FreeRTOS</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">ESP32</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">AVR</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Keil</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">PlatformIO</span>
+                </div>
+              </div>
+          
+              <!-- IoT -->
+              <div>
+                <h3 class="text-lg font-semibold mb-2 text-green-400">🌐 IoT & Connectivity</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">LoRa / LoRaWAN</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">MQTT</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Zigbee</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">BLE</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">RF</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Node-RED</span>
+                </div>
+              </div>
+          
+              <!-- Web -->
+              <div>
+                <h3 class="text-lg font-semibold mb-2 text-yellow-300">🌍 Web & App Development</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Django</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Flask</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Bootstrap</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Tailwind CSS</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Chart.js</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">SQLite / PostgreSQL</span>
+                </div>
+              </div>
+          
+              <!-- Cybersecurity -->
+              <div>
+                <h3 class="text-lg font-semibold mb-2 text-red-400">🛡️ Cybersecurity</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Kali Linux</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Wireshark</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Burp Suite</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Metasploit</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Forensics Tools</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Nmap</span>
+                </div>
+              </div>
+          
+              <!-- OS / Dev Tools -->
+              <div>
+                <h3 class="text-lg font-semibold mb-2 text-gray-300">⚙️ Systems & Dev Tools</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Linux</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Git</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">Docker</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">VS Code</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">GNU Make</span>
+                  <span class="bg-gray-700 text-white px-3 py-1 rounded-full">VirtualBox / VMware</span>
+                </div>
+              </div>
+          
+            </div>
+        </div>
         
 
         <div class="text-center mt-20">
