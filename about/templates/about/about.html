@@ -1,0 +1,210 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="w-full sm:w-full md:w-full lg:w-8/12 mx-auto mt-10">
+        
+        <div class="text-center mb-4">
+            <span class="text-center text-base text-white bg-gray-700 rounded-full px-5 py-3">About</span>
+        </div>
+
+        <div class="text-center my-6">
+            <h1 class="text-center text-gray-100 text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold mb-4">About Kemoko KEITA</h1>
+
+            <p class="text-gray-400 text-xl leading-relaxed">
+                👋 I’m Kemoko Keita — a tech enthusiast who loves building smart, connected systems. With a background in Embedded Systems, IoT, and Cybersecurity, I founded KMK-Tech to merge engineering precision with security-first development. Whether I’m coding firmware or designing full-stack architectures, my focus is always on creating clean, efficient, and secure solutions.
+            </p>
+        </div>
+
+        <div class="border-2 border-gray-400 p-3 shadow rounded-xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+            <div>
+                <img
+                    src="{% static 'images/profile/kk.jpg' %}"
+                    alt="Kemoko KEITA"
+                    class="w-100 h-auto rounded-lg  border-2 border-white shadow-lg"
+                />
+            </div>
+            <div>
+                <p class="text-7xl text-gray-300">Engineer </p>
+            </div>
+        </div>
+
+
+        <div class="mt-16">
+            <h2 class="text-2xl font-bold mb-4 text-gray-100">💡 What Drives Me</h2>
+            <ul class="list-disc ml-6 space-y-2 text-gray-300 text-base">
+              <li>Clean code and reliable systems are not optional — they’re my standard.</li>
+              <li>Security should be part of design, not an afterthought.</li>
+              <li>Curiosity and learning fuel my work — every project teaches me something.</li>
+            </ul>
+        </div>
+
+
+        <div class="my-12">
+            <h2 class="text-2xl font-bold mb-6 text-center text-gray-700"></h2>
+        
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
+                <div class="p-4">
+                    <h1 class="text-blue-900 text-9xl font-extrabold">2</h1>
+                    <span class="text-gray-400 text-lg">Years of experience</span>
+                </div>
+                <div class="p-4">
+                    <h1 class="text-blue-900 text-9xl font-extrabold">10+</h1>
+                    <span class="text-gray-400 text-lg">Personal and Professional projects</span>
+                </div>
+                <div class="p-4">
+                    <h1 class="text-blue-900 text-9xl font-extrabold">2</h1>
+                    <span class="text-gray-400 text-lg">Master's Degrees</span>
+                </div>
+            </div>
+        </div>
+
+        <!--<h1 class="text-4xl font-bold mt-6 my-4">Professional Experience</h1>
+
+        <h1 class="text-4xl font-bold mt-6 my-4">Education</h1>-->
+
+        <!--<div class="my-12">
+            <h2 class="text-2xl font-bold mb-6 text-center text-gray-700"></h2>
+        
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-gray-800">
+                <div class="p-4 bg-gray-300 shadow rounded">
+                    🔌 Embedded Systems Development<br />
+                    <span class="text-sm text-gray-700">C, STM32, FreeRTOS</span>
+                </div>
+                <div class="p-4 bg-gray-300 shadow rounded">
+                    🌐 IoT Architecture & Communication<br />
+                    <span class="text-sm text-gray-500">MQTT, LoRaWAN</span>
+                </div>
+                <div class="p-4 bg-gray-300 shadow rounded">
+                    💻 Cross-Platform App Dev<br />
+                    <span class="text-sm text-gray-500">C/C++, Qt</span>
+                </div>
+                <div class="p-4 bg-gray-300 shadow rounded">
+                    🐍 Web Development<br />
+                    <span class="text-sm text-gray-500">Python, Django</span>
+                </div>
+                <div class="p-4 bg-gray-300 shadow rounded">
+                    🛡️ Cybersecurity & Pentesting<br />
+                    <span class="text-sm text-gray-500">Tools, Forensics, Analysis</span>
+                </div>
+                <div class="p-4 bg-gray-300 shadow rounded">
+                    🔧 System Integration<br />
+                    <span class="text-sm text-gray-500">Embedded + Web + Security</span>
+                </div>
+            </div>
+        </div>-->
+
+
+        <div class="my-16">
+            <h2 class="text-3xl font-bold mb-10 text-center text-gray-100">What I Do at KMK-Tech</h2>
+          
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-white">
+              
+              <!-- 🚀 Engineering -->
+              <div class="bg-indigo-700 p-6 rounded-xl text-center">
+                <p class="text-center text-5xl py-3">🚀</p>
+                <h3 class="text-3xl font-bold mb-4 text-gray-100"> Engineering</h3>
+                <ul class="space-y-2 text-sm">
+                  <li>🔌 Embedded Systems (STM32, FreeRTOS)</li>
+                  <li>🌐 IoT Connectivity (LoRa, MQTT, ESP32)</li>
+                  <li>💻 Software Engineering </li>
+                </ul>
+              </div>
+          
+              <!-- 💻 Software Development -->
+              <div class="bg-green-800 p-6 rounded-xl text-center">
+                <p class="text-center text-5xl py-3">💻</p>
+                <h3 class="text-3xl font-bold mb-4 text-green-100">Software Development</h3>
+                <ul class="space-y-2 text-sm">
+                  <li>🧠 Systems Programming (C / C++)</li>
+                  <li>📱 Cross-Platform Apps (Qt / Flutter)</li>
+                  <li>🐍 Web Development (Python / Django)</li>
+                </ul>
+              </div>
+          
+              <!-- 🛡️ Cybersecurity -->
+              <div class="bg-red-800 p-6 rounded-xl shadow text-center">
+                <p class="text-center text-5xl py-3">🛡️</p>
+                <h3 class="text-3xl font-bold mb-4 text-red-100">Cybersecurity</h3>
+                <ul class="space-y-2 text-sm">
+                  <li>🛡️ Pentesting & Risk Analysis</li>
+                  <li>🔍 Forensics & System Hardening</li>
+                </ul>
+              </div>
+          
+            </div>
+        </div>
+
+
+        <div class="my-16">
+            <h2 class="text-2xl font-bold text-gray-100 mb-6">🧰 Tools & Technologies</h2>
+
+            <div class="flex flex-wrap gap-3 my-4">
+                <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm">C</span>
+                <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm">C++</span>
+                <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm">Python</span>
+                <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm">Shell</span>
+                <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm">PHP</span>
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+              <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm">STM32</span>
+              <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm">ESP32</span>
+              <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm">FreeRTOS</span>
+              <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm">LoRa</span>
+              <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm">Django</span>
+              <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm">Linux</span>
+              <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm">Pentesting Tools</span>
+            </div>
+        </div>
+
+
+        <section class="max-w-5xl mx-auto text-gray-100">
+            <h1 class="text-3xl font-bold my-8 text-gray-200">Professional Experience</h1>
+          
+            <div class="space-y-8">
+                {% for exp in experiences %}
+                    <div class="border-l-2 border-gray-500 pl-3">
+                        <h2 class="text-xl text-gray-300 font-bold">{{ exp.company }} <span class="text-xs font-bold bg-blue-300 text-gray-700 px-2 py-1 ms-5">({{ exp.start_date }} – {{ exp.end_date }})</span></h2>
+                        <p class="text-gray-600 font-semibold mb-1">{{ exp.role }}</p>
+                        <p class="text-gray-400 text-lg">{{ exp.description|safe }}</p>
+                        {% if exp.website %}
+                            <a href="{{ exp.website }}" target="_blank" class="inline-block mt-2 px-4 py-1 border border-gray-600 text-sm text-gray-600 bg-gray-300 rounded hover:bg-gray-700 transition">
+                                Visit {{ exp.company }}
+                            </a>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+          
+            <h1 class="text-3xl font-bold my-12 mb-8 text-gray-100">Education & Certifications</h1>
+          
+            <div class="space-y-8">
+              {% for edu in educations %}
+              <div class="border-l-2 border-gray-600 pl-6">
+                <h2 class="text-xl text-gray-300 font-bold">{{ edu.school }} <span class="text-xs font-bold bg-blue-300 text-gray-700 px-2 py-1 ms-5">({{ edu.start_date }} – {{ edu.end_date }})</span></h2>
+                <p class="text-gray-600 font-semibold mb-1">{{ edu.degree }}</p>
+                <p class="text-gray-400">{{ edu.description|safe }}</p>
+                {% if edu.website %}
+                  <a href="{{ edu.website }}" target="_blank" class="inline-block mt-2 px-4 py-1 border border-gray-600 text-sm text-gray-600 bg-gray-300 rounded hover:bg-gray-700 transition">
+                    Visit {{ edu.school }}
+                  </a>
+                {% endif %}
+              </div>
+              {% endfor %}
+            </div>
+        </section>
+        
+
+        <div class="text-center mt-20">
+            <h2 class="text-xl font-semibold text-gray-100 mb-2">🤝 Interested in working together?</h2>
+            <p class="text-gray-400 mb-4">Whether you're a company, a collaborator, or just curious — I’d love to hear from you.</p>
+            <a href="{% url 'contact' %}" class="inline-block px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+              Contact Me →
+            </a>
+        </div>
+    </div>
+    
+{% endblock %}

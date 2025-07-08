@@ -13,15 +13,44 @@
 		{% tailwind_css %}
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+			  const toggles = [
+				document.getElementById('theme-toggle-mobile'),
+				document.getElementById('theme-toggle-desktop')
+			  ].filter(Boolean); // removes nulls if one is missing
+		  
+			  const iconSuns = document.querySelectorAll('.icon-sun');
+			  const iconMoons = document.querySelectorAll('.icon-moon');
+		  
+			  const savedTheme = localStorage.getItem('theme');
+			  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			  const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+		  
+			  document.documentElement.classList.toggle('dark', isDark);
+			  iconSuns.forEach(el => el.classList.toggle('hidden', !isDark));
+			  iconMoons.forEach(el => el.classList.toggle('hidden', isDark));
+		  
+			  toggles.forEach(toggle => {
+				toggle.addEventListener('click', () => {
+				  const currentlyDark = document.documentElement.classList.toggle('dark');
+				  localStorage.setItem('theme', currentlyDark ? 'dark' : 'light');
+				  iconSuns.forEach(el => el.classList.toggle('hidden', !currentlyDark));
+				  iconMoons.forEach(el => el.classList.toggle('hidden', currentlyDark));
+				});
+			  });
+			});
+		  </script>
 	</head>
 
-	<body class="bg-gray-100 text-gray-900">
+	<body class="bg-gray-900 text-gray-900">
 		<div class="flex min-h-screen">
 			<!-- Sidebar -->
 			{% include 'partials/_sidebar.html' %}
 		
 			<!-- Main content -->
-			<div class="flex flex-col min-h-screen ml-64">
+			<div class="flex flex-col flex-1 min-h-screen lg:ml-64">
 				{% include 'partials/_header.html' %}
 		
 				<main class="flex-grow p-6">

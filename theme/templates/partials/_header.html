@@ -5,7 +5,7 @@
     </div>
 </header>-->
 
-<header class="bg-white shadow-md px-4 py-3 flex justify-between items-center md:hidden">
+<!--<header class="bg-white shadow-md px-4 py-3 flex justify-between items-center lg:hidden">
     <h1 class="text-lg font-semibold">KMK-Tech</h1>
     <button id="toggleSidebar" class="text-gray-600 focus:outline-none">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
@@ -13,4 +13,27 @@
         <path d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
     </button>
+</header>-->
+
+<header class="bg-white dark:bg-gray-900 shadow-md px-4 py-3 flex justify-between items-center lg:hidden">
+  <h1 class="text-lg font-semibold text-gray-900 dark:text-white">KMK-Tech</h1>
+
+  <div class="flex items-center gap-4">
+    
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle-mobile" class="text-xl p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition" aria-label="Toggle Theme">
+      <span class="icon-sun hidden">☀️</span>
+      <span class="icon-moon hidden">🌙</span>
+    </button>
+    
+
+    <!-- Sidebar Toggle Button -->
+    <button id="toggleSidebar" class="text-gray-600 dark:text-gray-300 focus:outline-none" aria-label="Toggle Sidebar">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+  </div>
 </header>

@@ -10,16 +10,17 @@
 </aside>-->
 
 <!-- Sidebar -->
-<aside id="sidebar" class="hidden md:flex fixed top-0 left-0 h-full w-64 bg-gray-900 text-white flex-col justify-between z-40">
+<aside id="sidebar" class="hidden lg:flex fixed top-0 left-0 h-screen w-64 shadow bg-gray-700 text-white flex-col justify-between z-40">
+  
     <!-- Top section with profile -->
     <div>
         <div class="flex flex-col items-center py-6">
             <img
-            src="{% static 'images/profile/kmk3.jpeg' %}"
-            alt="Your photo"
-            class="w-40 h-40 rounded-full border-2 border-white shadow-lg"
+				src="{% static 'images/profile/kk.jpg' %}"
+				alt="Your photo"
+				class="w-40 h-43 rounded-full border-2 border-white shadow-lg"
             />
-            <h1 class="mt-4 text-3xl font-extrabold">Kemoko Keita</h1>
+            <h1 class="mt-4 text-3xl font-extrabold">Kemoko KEITA</h1>
             <h4 class="mt-3 text-base font-semibold">Software Enginering</h4>
             <h4 class="text-base font-semibold">Embedded Systems IoT Enginering</h4>
             <p class="text-sm text-gray-400">Cybersecurity & Embedded</p>
@@ -34,12 +35,12 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="block py-2 px-4 rounded hover:bg-gray-800">
+                <a href="{% url 'projects' %}" class="block py-2 px-4 rounded hover:bg-gray-800">
                     <span class="pe-2">📄</span> Projects
                 </a>
             </li>
             <li>
-                <a href="#" class="block py-2 px-4 rounded hover:bg-gray-800">
+                <a href="{% url 'about' %}" class="block py-2 px-4 rounded hover:bg-gray-800">
                     <i class="fa-regular fa-user pe-2"></i>  About Me
                 </a>
             </li>
@@ -74,7 +75,7 @@
       >🌐 kmktech.me</a>
     </div> -->
 
-    <div class="flex justify-center space-x-4 mb-6">
+    <div class="flex justify-center space-x-5 mb-6">
         <!-- GitHub -->
         <a href="https://github.com/yourusername" target="_blank"
            class="text-white hover:text-gray-400 transition">

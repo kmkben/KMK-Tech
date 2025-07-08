@@ -19,10 +19,17 @@ from django.urls import path
 
 import core.views
 import contact.views
+import about.views
+import projects.views
 
 urlpatterns = [
     path('', core.views.home, name='home'),
+    
+    path('projects/', projects.views.project_list, name='projects'),
+    path('projects/<slug:slug>/', projects.views.project_show, name='project_show'),
+    
     path('contact/', contact.views.contact, name='contact'),
+    path('about/', about.views.about, name='about'),
     
     path('admin/', admin.site.urls),
 ]

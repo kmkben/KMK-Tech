@@ -39,11 +39,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'humanize',
+    'ckeditor',
+    'taggit',
     
     'core',
     'theme',
+    'projects',
     'tailwind',
     #'django_browser_reload',
+    
+    'contact',
+    'about',
 ]
 
 MIDDLEWARE = [
@@ -61,7 +67,7 @@ ROOT_URLCONF = 'KMK_Tech.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['theme/templates', 'core/templates', 'contact/templates'],
+        'DIRS': ['theme/templates', 'core/templates', 'contact/templates', 'about/about'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
