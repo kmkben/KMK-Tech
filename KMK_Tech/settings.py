@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'humanize',
     'ckeditor',
     'taggit',
+    'widget_tweaks',
     
     'core',
     'theme',

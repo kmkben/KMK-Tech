@@ -8,3 +8,7 @@
   * the scope of this path.
   */
 @source "../../../**/*.{html,py,js}";
+
+.form-input {
+  @apply mt-1 w-full border border-gray-600 bg-gray-800 text-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition;
+}
