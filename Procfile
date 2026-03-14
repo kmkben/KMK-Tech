@@ -1,1 +1,1 @@
-web: gunicorn KMK-Tech.wsgi
+web: gunicorn KMK_Tech.wsgi
