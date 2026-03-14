@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
-from ckeditor.fields import RichTextField
+from django_ckeditor_5.fields import CKEditor5Field
 from taggit.managers import TaggableManager
 
 # Create your models here.
