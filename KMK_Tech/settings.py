@@ -88,6 +88,8 @@ TEMPLATES = [
     },
 ]
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 WSGI_APPLICATION = 'KMK_Tech.wsgi.application'
 
 
